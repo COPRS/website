@@ -1,0 +1,38 @@
+/* Ce style définit une zone dans laquelle sont affichés les logos, la description du projet, etc...
+Cela permet d'avoir des marges vides sur le côté quand l'écran est grand, et ainsi permet d'aèrer la page web */
+
+
+/* Tout ces css indiques la taille de cette zone selon la taille de l'écran */
+
+.content {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+}
+
+@media (min-width: 576px) {
+    .content {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        max-width: 1250px;
+    }
+}

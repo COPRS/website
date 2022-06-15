@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Copernicus - Reference System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="rsc/img/favicon.png">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style_background_image.css" rel="stylesheet">
+    <link href="./css/style_content.css" rel="stylesheet">
+    <link href="./css/style_intro.css" rel="stylesheet">
+    <link href="./css/style_block2.css" rel="stylesheet">
+    <link href="./css/style_block3.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="content">
+            <div>
+                <a href="http://esa.int" target="_blank"><img class="icon" alt="ESA Homepage" src="rsc/img/esa-logo.png" /></a>
+            </div>
+            <div>
+                <a href="https://www.copernicus.eu" target="_blank"><img class="icon" alt="Copernicus Homepage" src="rsc/img/logo-copernicus.svg" /></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="content">
+            <div class="intro">
+                <h1>Copernicus</h1>
+                <h2>Reference System</h2>
+                <p style="line-height: 1.3;">
+                    <br> The Reference System is a key element of the CSC ground segment. It offers the environment for:
+                    <ul>
+                        <li>Providing an Open Source solution for the Sentinel Data processing and Distribution management;</li>
+                        <li>Supporting the assessment of the operational production services quality;</li>
+                        <li>Supporting the validation and benchmarking of new data flows.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div>
+                    <ul>
+                        <li class="liste-block-2">
+                            <a id="githubButton" target="_blank">GitHUB RS</a>
+                        </li>
+                        <li class="liste-block-2">
+                            <a class="long-text" id="sentinelProcessorButton" target="_blank">Sentinel Data Processor Publication Service</a>
+                        </li>
+                        <li class="liste-block-2">
+                            <a onClick="showApiContent();" id="apiButton" target="_blank">Open API</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div-image-title">
+                    <img class="image-title" src="rsc/img/s1.jpg"><br>Sentinel 1
+                </div>
+                <div class="div-image-title">
+                    <img class="image-title" src="rsc/img/s2.jpg"><br>Sentinel 2
+                </div>
+                <div class="div-image-title">
+                    <img class="image-title" src="rsc/img/s3.jpg"><br>Sentinel 3
+                </div>
+            </div>
+        </div>
+        <div id="github" class="content" hidden>
+            <div class="column">
+                <h3>GitHUB RS</h3>
+                <div class="wrapper">
+                    <a class="button" href="https://github.com/COPRS/reference-system-software" target="_blank">Go to GitHUB</a>
+                </div>
+                <p>The Reference System Service (RS) is a key component of the CSC Ground Segment, because it provides to the community a complete and open source processing and distribution environment software. Integrated with the Sentinel Data Processors
+                    and running on a Commercial Public Cloud, it has the capacity to substitute the nominal CSC Production and Distribution services. Provided by ESA, all Sentinel Data Processors are integrated, validated and published in the frame of
+                    the Reference System Service.</p>
+                <p>The Reference System Service is hosted on a secure Public Commercial Cloud and provides 3 operational functions:</p>
+                <ul>
+                    <li>sampled systematic Production and Distribution Service;</li>
+                    <li>ad-hoc Production and Distribution Service;</li>
+                    <li>environment to assure the test, integration, validation, benchmarking of Sentinel Data Processors (new processor versions, new user level data, new Sentinel units).</li>
+                </ul>
+                <img class="schema" src="rsc/img/RS---context-schema-github.png ">
+                <p>This software is the exact complement of the ESA-driven Sentinel Data Processors. It provides all the components to integrate them in processing chains and to distribute the output products.</p>
+                <div class="wrapper">
+                    <a class="button" href='https://github.com/COPRS/reference-system-software' target="_blank">Go to GitHUB</a>
+                </div>
+            </div>
+        </div>
+        <div id="sentinel-processor" class="content" hidden>
+            <div class="column" hidden>
+                <h3>Sentinel Data Processor Publication Service</h3>
+                <p>Sentinel Data Processor.</p>
+            </div>
+            <div class="wrapper">
+                <a class="button big-text-button" href='https://sentinelprocessors.copernicus.eu/spps/' target="_blank">Go to Sentinel Processor</a>
+            </div>
+        </div>
+
+        <div id="api" class="content" hidden>
+
+            <div class="column ">
+                <div>
+                    <h3>Open API</h3>
+                </div>
+                <p>API.</p>
+                <div class="wrapper">
+                    <a class="button" href='https://github.com/COPRS/production-common/tree/0.1.0-rc1/rs-core/native-api' target="_blank">Go to API</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer "></div>
+        <script type="text/javascript" src="js/scripts.js"></script>
+    </main>
+</body>
+
+</html>

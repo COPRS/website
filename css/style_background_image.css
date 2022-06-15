@@ -1,0 +1,44 @@
+/* Ce style permet d'afficher l'image de background, 
+la manière dont elle se place dans la page, 
+et dont elle se redimentionne selon la taille de l'écran 
+Si la taille de l'écran est inférieure à 992 px, l'image de background prend toute la largeur de l'écran
+par contre, si la taille de l'écran est supérieur à 992 px, l'image ne prend que 60% de la taille de l'écran */
+
+
+/* Indique la manière dont l'image de background va se positionner 
+dans l'image quand l'écran fait moins de 576 px de large */
+
+main {
+    /* Permet de choisir l'image de background*/
+    background-image: url("../rsc/img/background-1000x666.png");
+    /* Indique que l'image ne doit pas se répété*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+}
+
+
+/* Indique la manière dont l'image de background va se positionner 
+dans l'image quand l'écran fait plus de 992 px de large*/
+
+@media (min-width: 992px) {
+    main {
+        background-size: 60%;
+        background-position: top right;
+    }
+}
+
+
+/* small screens */
+
+@media (max-width: 768px) {
+    /* override stickyness so that the navigation does not follow scrolling */
+    nav[data-toggle="toc"] {
+        margin-bottom: 42px;
+        position: static;
+    }
+    /* don't expand nested items, which pushes down the rest of the page when navigating */
+    nav[data-toggle="toc"] .nav .active .nav {
+        display: none;
+    }
+}
