@@ -1,0 +1,62 @@
+h3 {
+    color: #076889;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Open Sans", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-justify: distribute;
+}
+
+@media (min-width: 992px) {
+    h3 {
+        margin: 2%;
+    }
+}
+
+a.button {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 2.5rem;
+    color: #076889;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 2%;
+    background-image: url(./../rsc/img/button-idle.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    a.big-text-button {
+        font-size: 2rem;
+    }
+}
+
+a.button:hover {
+    background-image: url(./../rsc/img/button-hover.png);
+    color: white;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.column img {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.schema {
+    max-width: 100%;
+}
