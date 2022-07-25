@@ -38,31 +38,19 @@ h3 {
     }
 }
 
-a.button {
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 2.5rem;
-    color: #076889;
+.button {
+    margin: 2%;
     text-decoration: none;
-    background: none;
-    border: none;
-    padding: 2%;
-    background-image: url(./../rsc/img/button-idle.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
-    a.big-text-button {
-        font-size: 2rem;
-    }
-}
-
-a.button:hover {
-    background-image: url(./../rsc/img/button-hover.png);
+    font-size: 1rem;
     color: white;
+    background-color: #08698a;
+    padding: 10px;
+    width: auto;
+}
+
+.button:hover {
+    background-color: #8eb9eb;
+    color: #08698a;
 }
 
 .wrapper {
