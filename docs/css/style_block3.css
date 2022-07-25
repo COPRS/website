@@ -8,9 +8,33 @@ h3 {
     text-justify: distribute;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1500px) {
     h3 {
         margin: 2%;
+    }
+}
+
+@media (min-width: 2200px) {
+    h3 {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 2400px) {
+    h3 {
+        margin-top: 200px;
+    }
+}
+
+@media (min-width: 2600px) {
+    h3 {
+        margin-top: 300px;
+    }
+}
+
+@media (min-width: 3000px) {
+    h3 {
+        margin-top: 400px;
     }
 }
 
