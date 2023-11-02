@@ -34,12 +34,9 @@
                 <h1>Copernicus</h1>
                 <h2>Reference System</h2>
                 <p style="line-height: 1.3;">
-                    <br> The Reference System is a key element of the CSC ground segment. It offers the environment for:
-                    <ul>
-                        <li>Providing an Open Source solution for the Sentinel Data processing and Distribution management;</li>
-                        <li>Supporting the assessment of the operational production services quality;</li>
-                        <li>Supporting the validation and benchmarking of new data flows.</li>
-                    </ul>
+                    <br> The Copernicus Reference System Software is a scalable and open-source processing chain.
+		    <br> It has been developed in AGILE since 2021 under Copernicus, a programme of the European Union implemented by the European Space Agency.
+                    <br> This Open-Source solution is today able to manage in parallel the image processing of all the Copernicus Sentinel 1, 2 and 3 (S1, S2 and S3) missions relying on Public Cloud scaling capabilities.
                 </p>
             </div>
         </div>
@@ -53,9 +50,6 @@
                         </li>
                         <li class="liste-block-2">
                             <a class="long-text" id="sentinelProcessorButton" target="_blank">Sentinel Data Processor Publication Service</a>
-                        </li>
-                        <li class="liste-block-2">
-                            <a onClick="showApiContent();" id="apiButton" target="_blank">Open API</a>
                         </li>
                     </ul>
                 </div>
@@ -115,22 +109,23 @@
             </div>
         </div>
 
-        <div id="api" class="content description-hidden" hidden>
-            <div class="column" hidden>
-                <h3>Open API</h3>
-            </div>
-            <div class="wrapper">
-                <button class="button" onclick="javascript:window.open('https://github.com/COPRS/production-common/tree/develop/rs-core/native-api', '_blank');" type="button">Go to API</button>
-            </div>
-            <p>The Native API is an outgoing interface of the Copernicus Reference System (COPRS). It enables users to search for processed satellite data (products) and download it. Together with the outgoing interfaces PRIP and DDIP it forms the Reference
-                System API (RS-API).</p>
-            <p>The Native API is based on the STAC item search. At this state the API supports the GET HTTP method for search requests and the query parameter datetime.</p>
-            <div class="wrapper">
-                <br>
-                <button class="button" onclick="javascript:window.open('https://github.com/COPRS/production-common/tree/develop/rs-core/native-api', '_blank');" type="button">Go to API</button>
+
+        <div class="content">
+            <div class="additionalinformation">
+                <p style="line-height: 1.3;">
+		    <br>The Reference System Software is an assembly of Free Open Source Softwares (FOSS) and of ad hoc components developed during the project. The main drivers of the development have been: to design a micro-service architecture, to rely at the maximum on state-of-the-art FOSS, to make the solution scalable to be able to meet the expected level of performance of each mission and processing level and to make a Cloud Agnostic solution able to run either on a Public Cloud infrastructure or on a Private Cloud.
+		    <br>The whole engineering and development phase has been collaboratively managed through a dedicated public Github Project and all the developments and the associated documentation are available publically under: https://github.com/COPRS
+		    <br>This platform takes as inputs the Copernicus S1, S2 and S3 data, through each mission’s reception stations and the EDRS Ground Segment, and the auxiliary data, from ESA’s Auxiliary Data Gathering System. Based on these inputs it uses two types of components: Core (common to any mission) and AddOn (specific to a mission – eg. an embedding of the Processors) to generate the User Level Data within the expected timeliness.
+		    <br>The products are made available to the external users through oDATA and STAC APIs.
+		    <br>All the components composing the system are available under GitHub with their associated documentation. Github and system breakdown detailed on the figure allows to understand the design of the solution.
+		    <br>First of all, at system level a first repository named Reference- System-Software presents the system and details how to contribute and deploy the system. At the same system level, an Issues repository is available to manage all the issues related to RS Software.
+		    <br>The system itself relies on Infrastructure components to host and run the Reference System Software. This part of the system also includes the Security components necessary to protect the system according to the associated security risk analysis.
+		    <br>Above the infrastructure some common components have been developed to support the processing of any mission. It includes the Ingoing and Outgoing interfaces, the data Catalog, the compression of data and the data lifecycle management. They are completed by specific common components: the monitoring (needed to operate the system) and the User Web Client (for end users to see the production on a Map).
+		    <br>Once all these components are available then we are ready to deploy the ones which are specific to a mission, specifying the associated workflow. For this end we have developed RS AddOns which embed the Instrument Processing Facilities (IPF) provided by ESA. A RS add-on is a Spring Cloud Data Flow chain that embeds two kinds of processors: the Processor Unit: mainly trigger, prepare worker, router, filter and the Data Processor Unit: mainly execution worker. The execution worker wraps a Copernicus Sentinel Data Processor binaries and their static data. These AddOns are only accessible to the users authorized by ESA and the procedure to build them is available on GitHub.
+                </p>
             </div>
         </div>
-        </div>
+	</div>
         <div class="footer "></div>
         <script type="text/javascript" src="js/scripts.js"></script>
     </main>
